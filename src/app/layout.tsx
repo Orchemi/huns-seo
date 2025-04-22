@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 		initialScale: 1,
 	},
 	robots: BASE_METADATA.ROBOTS,
+	verification: BASE_METADATA.VERIFICATION,
 };
 
 export default function RootLayout({

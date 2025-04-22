@@ -1,4 +1,5 @@
 import {
+	ResolvedVerification,
 	Robots,
 	TemplateString,
 } from 'next/dist/lib/metadata/types/metadata-types';
@@ -27,9 +28,19 @@ const ROBOTS: Robots = {
 	nocache: true,
 };
 
+const NAVER_VERIFICATION_KEY = 'd032c0ac6e42db330a3fa3455f7d90f569976e6b';
+
+const VERIFICATION: ResolvedVerification = {
+	google: [],
+	other: {
+		'naver-site-verification': [NAVER_VERIFICATION_KEY],
+	},
+};
+
 export const BASE_METADATA = {
 	BASE_URL,
 	TITLE,
 	IMAGES,
 	ROBOTS,
+	VERIFICATION,
 };
