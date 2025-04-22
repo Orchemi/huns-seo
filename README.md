@@ -20,7 +20,7 @@
 | Version       | Content                                  | Status |
 | ------------- | ---------------------------------------- | :----: |
 | release/0.1.0 | GitHub Project 초기 설정                 |   ✅   |
-| release/0.1.1 | DX를 위한 Project 초기 설정              |   🔥   |
+| release/0.1.1 | DX를 위한 Project 초기 설정              |   ✅   |
 | release/1.0.X | 경쟁 상대가 없는 생태계에서의 SEO 설정   |   ☑️   |
 | release/1.1.X | 경쟁 상대가 있는 생태계에서의 SEO 고도화 |   ☑️   |
 
@@ -35,7 +35,7 @@
 |  Category  | Task                                                       | Status |
 | :--------: | ---------------------------------------------------------- | :----: |
 | ⚙️ Setting | GitHub labeler 및 기타 CI 설정                             |   ✅   |
-| ⚙️ Setting | [left-hook](https://github.com/evilmartians/lefthook) 설정 |   ☑️   |
+| ⚙️ Setting | [left-hook](https://github.com/evilmartians/lefthook) 설정 |   ✅   |
 | 🧩 Feature | 검색엔진 서브 링크 노출                                    |   ☑️   |
 | 🧩 Feature | Google Analytics utm 최적화                                |   ☑️   |
 | 🧩 Feature | Google Tag Manager event 추적                              |   ☑️   |
