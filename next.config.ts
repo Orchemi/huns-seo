@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
 		return [
 			{
 				source: '/sitemap.xml',
-				destination: '/sitemap/1',
+				destination: '/sitemap/1.xml',
 			},
 		];
 	},
