@@ -11,7 +11,24 @@
 
 <br />
 
-## Road Map
+## Missions
+
+> [!NOTE]
+> 세부적으로는 이런 걸 해보고 싶습니다.  
+> 참고로 SEO와 상관 없는 프로젝트 설정 부분도 있습니다.
+
+|  Category  | Task                                                       | Status |
+| :--------: | ---------------------------------------------------------- | :----: |
+| ⚙️ Setting | GitHub labeler 및 기타 CI 설정                             |   ✅   |
+| ⚙️ Setting | [left-hook](https://github.com/evilmartians/lefthook) 설정 |   ✅   |
+| 🧩 Feature | 검색엔진 서브 링크 노출                                    |   ☑️   |
+| 🧩 Feature | Google Analytics utm 최적화                                |   ☑️   |
+| 🧩 Feature | Google Tag Manager event 추적                              |   ☑️   |
+| 🧩 Feature | User Flow Monitoring                                       |   ☑️   |
+
+<br />
+
+## Road Map & History
 
 | NOT_STARTED | IN_PROGRESS | DONE |
 | :---------: | :---------: | :--: |
@@ -27,17 +44,9 @@
 
 <br />
 
-## Missions
+## User Guide
 
-> [!INFO]
-> 세부적으로는 이런 걸 해보고 싶습니다.
-> 참고로 SEO와 상관 없는 프로젝트 설정 부분도 있습니다.
-
-|  Category  | Task                                                       | Status |
-| :--------: | ---------------------------------------------------------- | :----: |
-| ⚙️ Setting | GitHub labeler 및 기타 CI 설정                             |   ✅   |
-| ⚙️ Setting | [left-hook](https://github.com/evilmartians/lefthook) 설정 |   ✅   |
-| 🧩 Feature | 검색엔진 서브 링크 노출                                    |   ☑️   |
-| 🧩 Feature | Google Analytics utm 최적화                                |   ☑️   |
-| 🧩 Feature | Google Tag Manager event 추적                              |   ☑️   |
-| 🧩 Feature | User Flow Monitoring                                       |   ☑️   |
+> [!CAUTION]
+> 본 서비스는 개인적인 장기 학습 프로젝트입니다.  
+> issue와 pr은 개인적으로 구조를 설계한대로 운영하고 있기 때문에,
+> 오류 제보나 피드백은 [discussion](/discussions)을 이용해주시면 감사하겠습니다🙇🏻‍♂️
