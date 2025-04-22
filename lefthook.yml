@@ -14,7 +14,7 @@ pre-commit:
 
     - name: 'lint-staged'
       glob: '*.{js,ts,jsx,tsx}'
-      run: 'lint-staged'
+      run: 'pnpm run lint-staged'
       fail_text: 'Lint failed'
 
     - name: 'prettier'

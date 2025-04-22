@@ -4,7 +4,7 @@
 COMMIT_MSG=$(head -n1 "$1")
 
 # Define the regex pattern for validation
-PATTERN='^(Install|Docs|Add|Feat|Fix|Draft|Style|Refactor|Chore|Rename|Remove):.*$'
+PATTERN='^(Install|Docs|Add|Feat|Fix|Draft|Style|Refactor|Chore|Rename|Remove):.*#.*$'
 
 # Check if the commit message matches the pattern
 if ! [[ $COMMIT_MSG =~ $PATTERN ]]; then
@@ -13,9 +13,9 @@ if ! [[ $COMMIT_MSG =~ $PATTERN ]]; then
 
 아래 예제를 참고해주세요
 ------------------------------------------------------
-"(Prefix): 커밋 내용"
+"(Prefix): 커밋 내용 #issue-number"
 
-"Feat: 구글 로그인 기능 추가"
+"Feat: 구글 로그인 기능 추가 #123"
 ------------------------------------------------------
 
 사용가능한 commit의 Prefix는 아래와 같습니다.
