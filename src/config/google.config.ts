@@ -1,3 +1,4 @@
 export const GOOGLE = {
+	SITE_VERIFICATION: 'fxVNTmA3ZH-18vrJfrwA_-1tRzls5szkB5kgrZaggXY',
 	ANALYTICS_ID: 'G-DGV3KDLEYH',
 };

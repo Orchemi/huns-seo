@@ -5,6 +5,7 @@ import {
 } from 'next/dist/lib/metadata/types/metadata-types';
 import { BASE_CONFIG } from './base.config';
 import { filePrefix } from '@/share/env/env.constant';
+import { GOOGLE } from './google.config';
 
 const TITLE: TemplateString = {
 	default: BASE_CONFIG.TITLE,
@@ -31,7 +32,7 @@ const ROBOTS: Robots = {
 const NAVER_VERIFICATION_KEY = 'd032c0ac6e42db330a3fa3455f7d90f569976e6b';
 
 const VERIFICATION: ResolvedVerification = {
-	google: [],
+	google: [GOOGLE.SITE_VERIFICATION],
 	other: {
 		'naver-site-verification': [NAVER_VERIFICATION_KEY],
 	},
