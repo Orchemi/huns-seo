@@ -1,38 +1,36 @@
 import { Metadata } from 'next';
 import './globals.css';
+import { BASE_CONFIG } from '@/config/base.config';
+import { BASE_METADATA } from '@/config/metadata.config';
 
 export const metadata: Metadata = {
-	title: '훈세씨오',
-	description: 'SEO 연구 프로젝트',
+	metadataBase: BASE_METADATA.BASE_URL,
+	title: BASE_CONFIG.TITLE,
+	description: BASE_CONFIG.DESCRIPTION,
 	icons: {
 		icon: '/favicon.png',
 	},
 	openGraph: {
-		title: '훈세씨오',
-		description: 'SEO 연구 프로젝트',
-		url: 'https://seo.huns.site',
-		siteName: 'huns-seo',
-		images: [
-			{
-				url: 'https://seo.huns.site/og-image.png',
-				width: 1200,
-				height: 630,
-			},
-		],
-		locale: 'ko_KR',
+		title: BASE_CONFIG.TITLE,
+		description: BASE_CONFIG.DESCRIPTION,
+		url: BASE_CONFIG.URL,
+		siteName: BASE_CONFIG.SITE_NAME,
+		images: BASE_METADATA.IMAGES,
+		locale: BASE_CONFIG.LOCALE,
 		type: 'website',
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: '훈세씨오',
-		description: 'SEO 연구 프로젝트',
+		title: BASE_CONFIG.TITLE,
+		description: BASE_CONFIG.DESCRIPTION,
 		creator: '@orchemi',
-		images: ['https://seo.huns.site/og-image.png'],
+		images: BASE_CONFIG.IMAGES,
 	},
 	viewport: {
 		width: 'device-width',
 		initialScale: 1,
 	},
+	robots: BASE_METADATA.ROBOTS,
 };
 
 export default function RootLayout({
