@@ -15,7 +15,7 @@ const routeSiteMap: MetadataRoute.Sitemap = [
 ];
 
 // docs: TroubleShooting - Fix dynamic sitemap detection - https://github.com/vercel/next.js/pull/60356
-// 생성되는 사이트맵 경로 : [dv] {URL}/sitemap.xml/1 | [pr] {URL}/sitemap/1
+// 생성되는 사이트맵 경로 : {URL}/sitemap/1.xml
 export async function generateSitemaps() {
 	return [{ id: 1 }];
 }
