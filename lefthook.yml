@@ -1,0 +1,23 @@
+commit-msg:
+  jobs:
+    - name: 'commit-convention'
+      script: commit-convention-checker.sh
+      runner: 'bash'
+      fail_text: 'Commit message does not follow the conventional commits specification'
+
+pre-commit:
+  parallel: true
+  jobs:
+    - name: 'type-check'
+      run: 'pnpm run type-check'
+      fail_text: 'Type check failed'
+
+    - name: 'lint-staged'
+      glob: '*.{js,ts,jsx,tsx}'
+      run: 'lint-staged'
+      fail_text: 'Lint failed'
+
+    - name: 'prettier'
+      glob: '*.{js,ts,jsx,tsx}'
+      run: 'pnpm pretty-quick --staged --ignore-path .gitignore'
+      fail_text: 'Prettier failed'
