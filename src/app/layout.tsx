@@ -3,6 +3,7 @@ import './globals.css';
 import { BASE_CONFIG } from '@/config/base.config';
 import { BASE_METADATA } from '@/config/metadata.config';
 import GoogleScripts from '@/component/GoogleScripts';
+import NoScriptTagManager from '@/component/NoScriptTagManager';
 
 export const metadata: Metadata = {
 	metadataBase: BASE_METADATA.BASE_URL,
@@ -43,7 +44,10 @@ export default function RootLayout({
 	return (
 		<html lang="ko">
 			<GoogleScripts />
-			<body>{children}</body>
+			<body>
+				{children}
+				<NoScriptTagManager />
+			</body>
 		</html>
 	);
 }
