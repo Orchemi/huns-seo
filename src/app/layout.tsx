@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
 import { BASE_CONFIG } from '@/config/base.config';
 import { BASE_METADATA } from '@/config/metadata.config';
@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 	metadataBase: BASE_METADATA.BASE_URL,
 	title: BASE_CONFIG.TITLE,
 	description: BASE_CONFIG.DESCRIPTION,
+	keywords: BASE_CONFIG.keywords,
+	authors: BASE_CONFIG.AUTHOR,
+	creator: BASE_CONFIG.CREATOR,
+	publisher: BASE_CONFIG.PUBLISHER,
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
 	icons: {
 		icon: '/favicon.png',
 	},
