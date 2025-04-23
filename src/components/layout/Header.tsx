@@ -6,11 +6,11 @@ import { Menu, X } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const navigationItems = [
-	{ name: '홈', href: '/' },
 	{ name: '소개', href: '/about' },
 	{ name: '블로그', href: '/blog' },
 	{ name: '채용', href: '/careers' },
-	{ name: '금액 정책', href: '/pricing' },
+	{ name: '금액', href: '/pricing' },
+	{ name: '문의', href: '/contact' },
 ];
 
 export const Header = () => {
