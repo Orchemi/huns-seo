@@ -9,7 +9,7 @@ const navigationItems = [
 	{ name: '홈', href: '/' },
 	{ name: '소개', href: '/about' },
 	{ name: '블로그', href: '/blog' },
-	{ name: '채용', href: '/recruit' },
+	{ name: '채용', href: '/careers' },
 	{ name: '금액 정책', href: '/pricing' },
 ];
 
