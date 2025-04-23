@@ -11,6 +11,8 @@
 		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
+		"lucide-react": "^0.503.0",
+		"motion": "^12.7.4",
 		"next": "15.3.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
