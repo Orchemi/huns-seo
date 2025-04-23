@@ -18,7 +18,7 @@ export const Header = () => {
 
 	return (
 		<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-			<div className="container flex h-16 items-center justify-between">
+			<div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 				<Link href="/" className="flex items-center space-x-2">
 					<span className="text-xl font-bold">훈세씨오</span>
 				</Link>
@@ -56,7 +56,7 @@ export const Header = () => {
 				}}
 				className="md:hidden"
 			>
-				<div className="container space-y-2 pb-4">
+				<div className="mx-auto w-full max-w-7xl space-y-2 px-4 py-4 sm:px-6 lg:px-8">
 					{navigationItems.map((item) => (
 						<Link
 							key={item.href}

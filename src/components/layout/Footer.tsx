@@ -36,13 +36,15 @@ const footerLinks = [
 
 export const Footer = () => {
 	return (
-		<footer className="border-t bg-background">
-			<div className="container py-12">
+		<footer className="border-t border-gray-800 bg-gray-900 text-gray-100 mt-8">
+			<div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-4">
 					{/* Company Info */}
 					<div className="space-y-4">
-						<h3 className="text-lg font-semibold">{companyInfo.name}</h3>
-						<div className="space-y-2 text-sm text-muted-foreground">
+						<h3 className="text-lg font-semibold text-white">
+							{companyInfo.name}
+						</h3>
+						<div className="space-y-2 text-sm text-gray-200">
 							<p className="flex items-center gap-2">
 								<Mail className="h-4 w-4" />
 								{companyInfo.email}
@@ -61,13 +63,15 @@ export const Footer = () => {
 					{/* Footer Links */}
 					{footerLinks.map((section) => (
 						<div key={section.title} className="space-y-4">
-							<h3 className="text-lg font-semibold">{section.title}</h3>
-							<ul className="space-y-2 text-sm text-muted-foreground">
+							<h3 className="text-lg font-semibold text-white">
+								{section.title}
+							</h3>
+							<ul className="space-y-2 text-sm text-gray-400">
 								{section.links.map((link) => (
 									<li key={link.name}>
 										<Link
 											href={link.href}
-											className="hover:text-primary transition-colors"
+											className="hover:text-white transition-colors"
 										>
 											{link.name}
 										</Link>
@@ -79,7 +83,7 @@ export const Footer = () => {
 				</div>
 
 				{/* Copyright */}
-				<div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
+				<div className="mt-8 border-t border-gray-800 pt-8 text-center text-sm text-gray-300">
 					<p>
 						© {new Date().getFullYear()} {companyInfo.name}. All rights
 						reserved.
