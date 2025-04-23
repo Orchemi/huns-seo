@@ -1,11 +1,11 @@
-import { Header } from './Header';
-import { Footer } from './Footer';
+import { Header } from './header';
+import { Footer } from './footer';
 
 interface LayoutProps {
 	children: React.ReactNode;
 }
 
-export const Layout = ({ children }: LayoutProps) => {
+export const CommonLayout = ({ children }: LayoutProps) => {
 	return (
 		<div className="flex min-h-screen flex-col">
 			<Header />

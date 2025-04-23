@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Layout } from '@/components/layout/Layout';
+import { CommonLayout } from '@/components/layout/common-layout';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -67,7 +67,7 @@ const featuredPost = posts[0]; // 첫 번째 포스트를 featured로 사용
 
 export default function Blog() {
 	return (
-		<Layout>
+		<CommonLayout>
 			<div className="flex flex-col gap-16 px-4 py-16 sm:px-6 lg:px-8">
 				<div className="mx-auto w-full max-w-7xl">
 					<h1 className="mb-8 text-3xl font-bold sm:text-4xl">블로그</h1>
@@ -149,6 +149,6 @@ export default function Blog() {
 					</div>
 				</div>
 			</div>
-		</Layout>
+		</CommonLayout>
 	);
 }

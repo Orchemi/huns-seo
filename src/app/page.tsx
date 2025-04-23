@@ -2,7 +2,7 @@ import { ArrowRight, BarChart, Search, Target } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
-import { Layout } from '@/components/layout/Layout';
+import { CommonLayout } from '@/components/layout/common-layout';
 import { BASE_CONFIG } from '@/config/base.config';
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ const features = [
 
 export default function Home() {
 	return (
-		<Layout>
+		<CommonLayout>
 			<div className="flex flex-col gap-16 px-4 sm:px-6 lg:px-8">
 				{/* Hero Section */}
 				<section className="mx-auto flex w-full max-w-7xl flex-col items-center gap-8 py-16 text-center">
@@ -102,6 +102,6 @@ export default function Home() {
 					</Button>
 				</section>
 			</div>
-		</Layout>
+		</CommonLayout>
 	);
 }

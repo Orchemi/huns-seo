@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { BASE_CONFIG } from '@/config/base.config';
 import { BASE_METADATA } from '@/config/metadata.config';
-import GoogleScripts from '@/component/GoogleScripts';
-import NoScriptTagManager from '@/component/NoScriptTagManager';
+import GoogleScripts from '@/components/google-scripts';
+import NoScriptTagManager from '@/components/no-script-tag-manager';
 
 export const metadata: Metadata = {
 	metadataBase: BASE_METADATA.BASE_URL,

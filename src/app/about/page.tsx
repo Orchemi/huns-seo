@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Layout } from '@/components/layout/Layout';
+import { CommonLayout } from '@/components/layout/common-layout';
 import { GrowthChart } from '@/components/charts/GrowthChart';
 import { CompanyGrowthChart } from '@/components/about/CompanyGrowthChart';
 
@@ -49,7 +49,7 @@ const growthData = [
 
 export default function About() {
 	return (
-		<Layout>
+		<CommonLayout>
 			<div className="flex flex-col gap-16 px-4 sm:px-6 lg:px-8">
 				{/* Hero Section */}
 				<section className="mx-auto flex w-full max-w-7xl flex-col items-center gap-8 py-16 text-center">
@@ -312,6 +312,6 @@ export default function About() {
 					<CompanyGrowthChart />
 				</section>
 			</div>
-		</Layout>
+		</CommonLayout>
 	);
 }

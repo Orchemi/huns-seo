@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Layout } from '@/components/layout/Layout';
+import { CommonLayout } from '@/components/layout/common-layout';
 import { Button } from '@/components/ui/button';
 import { Check, ArrowRight, HelpCircle } from 'lucide-react';
 import Link from 'next/link';
@@ -167,7 +167,7 @@ const additionalServices = [
 
 export default function Pricing() {
 	return (
-		<Layout>
+		<CommonLayout>
 			<div className="flex flex-col gap-16 px-4 py-16 sm:px-6 lg:px-8">
 				{/* Hero Section */}
 				<section className="mx-auto flex w-full max-w-7xl flex-col items-center gap-8 text-center">
@@ -285,6 +285,6 @@ export default function Pricing() {
 					</Button>
 				</section>
 			</div>
-		</Layout>
+		</CommonLayout>
 	);
 }
