@@ -184,6 +184,7 @@ export default function Pricing() {
 
 				{/* Pricing Plans */}
 				<section className="mx-auto w-full max-w-7xl">
+					<h2 className=" text-2xl font-bold">요금제 안내</h2>
 					<div className="grid gap-8 lg:grid-cols-3">
 						{plans.map((plan) => (
 							<div
@@ -269,7 +270,7 @@ export default function Pricing() {
 				</section>
 
 				{/* CTA Section */}
-				<section className="mx-auto w-full max-w-7xl rounded-lg bg-primary/5 p-8 text-center">
+				<section className="mx-auto w-full max-w-7xl rounded-lg bg-primary/3 p-8 text-center">
 					<h2 className="break-keep text-balance text-2xl font-bold">
 						맞춤형 컨설팅이 필요하신가요?
 					</h2>

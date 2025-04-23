@@ -171,10 +171,17 @@ export default function Contact() {
 									<div className="space-y-2">
 										<Label htmlFor="business-type">기업 구분 *</Label>
 										<Select name="business-type" required>
-											<SelectTrigger className="w-full">
+											<SelectTrigger
+												className="w-full"
+												aria-label="기업 유형 선택"
+											>
 												<SelectValue placeholder="기업 유형을 선택하세요" />
 											</SelectTrigger>
-											<SelectContent>
+											<SelectContent
+												side="bottom"
+												align="center"
+												sideOffset={4}
+											>
 												{businessTypes.map((type) => (
 													<SelectItem key={type.value} value={type.value}>
 														{type.label}
@@ -186,10 +193,17 @@ export default function Contact() {
 									<div className="space-y-2">
 										<Label htmlFor="budget">예산 범위</Label>
 										<Select name="budget">
-											<SelectTrigger className="w-full">
+											<SelectTrigger
+												className="w-full"
+												aria-label="예산 범위 선택"
+											>
 												<SelectValue placeholder="예산 범위를 선택하세요" />
 											</SelectTrigger>
-											<SelectContent>
+											<SelectContent
+												side="bottom"
+												align="center"
+												sideOffset={4}
+											>
 												{budgetRanges.map((range) => (
 													<SelectItem key={range.value} value={range.value}>
 														{range.label}
@@ -221,7 +235,11 @@ export default function Contact() {
 									/>
 								</div>
 
-								<Button type="submit" className="w-full">
+								<Button
+									type="submit"
+									className="w-full"
+									aria-label="문의 양식 제출하기"
+								>
 									문의하기
 								</Button>
 
