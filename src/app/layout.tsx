@@ -4,6 +4,7 @@ import { BASE_CONFIG } from '@/config/base.config';
 import { BASE_METADATA } from '@/config/metadata.config';
 import { GOOGLE } from '@/config/google.config';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+import { WebsiteJsonLd } from '@/components/config/JsonLd';
 
 export const metadata: Metadata = {
 	metadataBase: BASE_METADATA.BASE_URL,
@@ -12,8 +13,11 @@ export const metadata: Metadata = {
 		default: BASE_CONFIG.TITLE,
 	},
 	description: BASE_CONFIG.DESCRIPTION,
-	keywords: BASE_CONFIG.keywords,
-	authors: BASE_CONFIG.AUTHOR,
+	keywords: BASE_CONFIG.KEYWORDS,
+	authors: {
+		name: BASE_CONFIG.AUTHOR.NAME,
+		url: BASE_CONFIG.AUTHOR.GITHUB_URL,
+	},
 	creator: BASE_CONFIG.CREATOR,
 	publisher: BASE_CONFIG.PUBLISHER,
 	formatDetection: {
@@ -56,6 +60,7 @@ export default function RootLayout({
 	return (
 		<html lang="ko">
 			<GoogleAnalytics gaId={GOOGLE.ANALYTICS_ID} />
+			<WebsiteJsonLd />
 			<body>{children}</body>
 			<GoogleTagManager gtmId={GOOGLE.TAG_MANAGER_ID} />
 		</html>
