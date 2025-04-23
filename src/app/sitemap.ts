@@ -5,13 +5,20 @@ import { BASE_CONFIG } from '@/config/base.config';
 import { MetadataRoute } from 'next';
 
 // route
-const routeSiteMap: MetadataRoute.Sitemap = [
+const subRouteList = ['/about', '/blog', '/careers', '/pricing', '/contact'];
+const mainRouteSiteMap: MetadataRoute.Sitemap = [
 	{
 		url: `${BASE_CONFIG.URL}`,
 		lastModified: new Date(),
 		changeFrequency: 'daily',
 		priority: 1,
 	},
+	...subRouteList.map((route) => ({
+		url: `${BASE_CONFIG.URL}${route}`,
+		lastModified: new Date(),
+		changeFrequency: 'daily' as const,
+		priority: 0.9,
+	})),
 ];
 
 // docs: TroubleShooting - Fix dynamic sitemap detection - https://github.com/vercel/next.js/pull/60356
@@ -21,5 +28,5 @@ export async function generateSitemaps() {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	return [...routeSiteMap];
+	return [...mainRouteSiteMap];
 }
