@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import { Layout } from '@/components/layout/Layout';
 import { GrowthChart } from '@/components/charts/GrowthChart';
+import { CompanyGrowthChart } from '@/components/about/CompanyGrowthChart';
 
 export const metadata: Metadata = {
-	title: '회사 소개 | 훈세씨오 - SEO 컨설팅 전문 기업',
+	title: '회사소개',
 	description:
-		'훈세씨오는 데이터 기반의 SEO 컨설팅으로 고객의 온라인 가시성을 높이고 비즈니스 성장을 지원합니다.',
+		'훈세씨오는 데이터 기반의 SEO 전략으로 기업의 디지털 성장을 이끄는 전문 컨설팅 기업입니다. 풍부한 경험과 전문성을 바탕으로 맞춤형 SEO 솔루션을 제공합니다.',
 };
 
 const companyInfo = {
@@ -298,6 +299,17 @@ export default function About() {
 						돕는 것을 목표로 합니다. 최신 기술과 분석 방법을 활용하여 고객의
 						온라인 가시성을 높이고, 지속 가능한 성장을 지원합니다.
 					</p>
+				</section>
+
+				<section className="mx-auto w-full max-w-7xl">
+					<h2 className="text-2xl font-bold mb-4">회사 성장 현황</h2>
+					<p className="text-gray-600 break-keep text-balance mb-8">
+						설립 이후 꾸준한 성장을 이어오며, 다양한 산업 분야의 고객사들과
+						함께하고 있습니다. 전문성과 신뢰를 바탕으로 한 서비스 제공으로 높은
+						고객 만족도를 유지하고 있습니다.
+					</p>
+
+					<CompanyGrowthChart />
 				</section>
 			</div>
 		</Layout>

@@ -7,7 +7,10 @@ import NoScriptTagManager from '@/component/NoScriptTagManager';
 
 export const metadata: Metadata = {
 	metadataBase: BASE_METADATA.BASE_URL,
-	title: BASE_CONFIG.TITLE,
+	title: {
+		template: `%s | ${BASE_CONFIG.TITLE}`,
+		default: BASE_CONFIG.TITLE,
+	},
 	description: BASE_CONFIG.DESCRIPTION,
 	keywords: BASE_CONFIG.keywords,
 	authors: BASE_CONFIG.AUTHOR,

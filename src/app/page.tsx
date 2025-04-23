@@ -3,18 +3,19 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import { Layout } from '@/components/layout/Layout';
+import { BASE_CONFIG } from '@/config/base.config';
 
 export const metadata: Metadata = {
-	title: '홈 | 훈세씨오 - SEO 컨설팅 전문 기업',
-	description:
-		'데이터 기반의 SEO 컨설팅으로 고객의 온라인 가시성을 높이고 비즈니스 성장을 지원합니다.',
+	title: {
+		absolute: BASE_CONFIG.TITLE,
+	},
+	description: BASE_CONFIG.DESCRIPTION,
 	openGraph: {
-		title: '훈세씨오 - SEO 컨설팅 전문 기업',
-		description:
-			'데이터 기반의 SEO 컨설팅으로 고객의 온라인 가시성을 높이고 비즈니스 성장을 지원합니다.',
+		title: BASE_CONFIG.TITLE,
+		description: BASE_CONFIG.DESCRIPTION,
 		type: 'website',
 		locale: 'ko_KR',
-		siteName: '훈세씨오',
+		siteName: BASE_CONFIG.SITE_NAME,
 	},
 };
 
