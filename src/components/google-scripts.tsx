@@ -1,36 +1,8 @@
 import { GOOGLE } from '@/config/google.config';
-import Script from 'next/script';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 
 const GoogleScripts = () => {
-	return (
-		<>
-			{/* Google tag (gtag.js) */}
-			<Script
-				id="google-analytics"
-				async
-				src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE.ANALYTICS_ID}`}
-				strategy="afterInteractive"
-			>
-				{`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '${GOOGLE.ANALYTICS_ID}');
-        `}
-			</Script>
-			{/* Google Tag Manager */}
-			<Script id="google-tag-manager" strategy="afterInteractive">
-				{`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-						new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-						j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-						'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-						})(window,document,'script','dataLayer','${GOOGLE.TAG_MANAGER_ID}');
-          `}
-			</Script>
-		</>
-	);
+	return <></>;
 };
 
 export default GoogleScripts;
