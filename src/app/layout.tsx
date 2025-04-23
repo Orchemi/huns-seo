@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { BASE_CONFIG } from '@/config/base.config';
 import { BASE_METADATA } from '@/config/metadata.config';
-import GoogleScripts from '@/components/google-scripts';
-import NoScriptTagManager from '@/components/no-script-tag-manager';
+import { GOOGLE } from '@/config/google.config';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
 	metadataBase: BASE_METADATA.BASE_URL,
@@ -55,11 +55,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="ko">
-			<GoogleScripts />
-			<body>
-				{children}
-				<NoScriptTagManager />
-			</body>
+			<GoogleAnalytics gaId={GOOGLE.ANALYTICS_ID} />
+			<body>{children}</body>
+			<GoogleTagManager gtmId={GOOGLE.TAG_MANAGER_ID} />
 		</html>
 	);
 }
