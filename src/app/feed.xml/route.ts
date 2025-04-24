@@ -12,8 +12,15 @@ export const GET = async () => {
 		site_url: BASE_CONFIG.URL,
 		feed_url: `${BASE_CONFIG.URL}/feed.xml`,
 		image_url: `${BASE_CONFIG.URL}/og-image.png`,
-		copyright: `All rights reserved by ${BASE_CONFIG.AUTHOR}`,
+		copyright: `All rights reserved by ${BASE_CONFIG.AUTHOR.NAME}`,
 		pubDate: new Date(),
+	});
+
+	feed.item({
+		title: BASE_CONFIG.TITLE,
+		description: BASE_CONFIG.DESCRIPTION,
+		url: BASE_CONFIG.URL,
+		date: new Date(),
 	});
 
 	MAIN_ROUTES.forEach((route) => {
