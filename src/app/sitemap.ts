@@ -2,10 +2,10 @@
 // docs: Next.js - generateSitemaps - https://nextjs.org/docs/app/api-reference/functions/generate-sitemaps
 
 import { BASE_CONFIG } from '@/config/base.config';
+import { MAIN_ROUTES, ROUTE_PATH } from '@/share/route/route.constant';
 import { MetadataRoute } from 'next';
 
 // route
-const subRouteList = ['/about', '/blog', '/careers', '/pricing', '/contact'];
 const mainRouteSiteMap: MetadataRoute.Sitemap = [
 	{
 		url: `${BASE_CONFIG.URL}`,
@@ -13,8 +13,8 @@ const mainRouteSiteMap: MetadataRoute.Sitemap = [
 		changeFrequency: 'daily',
 		priority: 1,
 	},
-	...subRouteList.map((route) => ({
-		url: `${BASE_CONFIG.URL}${route}`,
+	...MAIN_ROUTES.map((route) => ({
+		url: `${BASE_CONFIG.URL}${ROUTE_PATH[route]()}`,
 		lastModified: new Date(),
 		changeFrequency: 'daily' as const,
 		priority: 0.9,
