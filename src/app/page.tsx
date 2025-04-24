@@ -68,6 +68,7 @@ export default function Home() {
 
 				{/* Features Section */}
 				<section className="mx-auto w-full max-w-7xl py-16">
+					<h2 className="text-2xl font-bold mb-8 ">훈세씨오의 특별한 서비스</h2>
 					<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 						{features.map((feature) => (
 							<div

@@ -84,7 +84,8 @@ export default function Contact() {
 				<div className="mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-2">
 					{/* Contact Information */}
 					<div className="flex flex-col gap-8">
-						<div className="grid gap-6 sm:grid-cols-2">
+						<h2 className="text-2xl font-bold">문의 정보</h2>
+						<div className="grid sm:grid-cols-2 gap-4">
 							{contactInfo.map((info) => (
 								<Card key={info.title}>
 									<CardHeader className="space-y-1">
