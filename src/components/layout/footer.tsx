@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { ROUTE, ROUTE_NAME, ROUTE_PATH } from '@/share/route/route.constant';
 
 const companyInfo = {
 	name: '훈세씨오(hunsseo Corp.)',
@@ -13,23 +14,23 @@ const footerLinks = [
 	{
 		title: '회사',
 		links: [
-			{ name: '소개', href: '/about' },
-			{ name: '채용', href: '/recruit' },
-			{ name: '블로그', href: '/blog' },
+			{ name: ROUTE_NAME[ROUTE.ABOUT], href: ROUTE_PATH[ROUTE.ABOUT]() },
+			{ name: ROUTE_NAME[ROUTE.CAREERS], href: ROUTE_PATH[ROUTE.CAREERS]() },
+			{ name: ROUTE_NAME[ROUTE.BLOG], href: ROUTE_PATH[ROUTE.BLOG]() },
 		],
 	},
 	{
 		title: '서비스',
 		links: [
-			{ name: '금액 정책', href: '/pricing' },
-			{ name: 'SEO 컨설팅', href: '/services' },
+			{ name: '금액 정책', href: ROUTE_PATH[ROUTE.PRICING]() },
+			{ name: 'SEO 컨설팅', href: ROUTE_PATH[ROUTE.CONTACT]() },
 		],
 	},
 	{
 		title: '법적',
 		links: [
-			{ name: '이용약관', href: '/terms' },
-			{ name: '개인정보처리방침', href: '/privacy' },
+			{ name: '이용약관', href: '/' },
+			{ name: '개인정보처리방침', href: '/' },
 		],
 	},
 ];
