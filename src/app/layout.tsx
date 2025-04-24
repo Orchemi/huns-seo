@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { BASE_CONFIG } from '@/config/base.config';
 import { BASE_METADATA } from '@/config/metadata.config';
-import { GOOGLE } from '@/config/google.config';
+import { GOOGLE } from '@/share/google/google.config';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { WebsiteJsonLd } from '@/components/config/JsonLd';
 

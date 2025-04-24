@@ -5,7 +5,7 @@ import {
 } from 'next/dist/lib/metadata/types/metadata-types';
 import { BASE_CONFIG } from './base.config';
 import { filePrefix } from '@/share/env/env.constant';
-import { GOOGLE } from './google.config';
+import { GOOGLE } from '../share/google/google.config';
 
 const TITLE: TemplateString = {
 	default: BASE_CONFIG.TITLE,
