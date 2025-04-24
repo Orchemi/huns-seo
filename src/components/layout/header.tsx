@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'motion/react';
+import GACta from '@/share/google/GACta';
+import { GA_CTA_EVENTS } from '@/share/google/ga.constant';
 
 const navigationItems = [
 	{ name: '소개', href: '/about' },
@@ -31,7 +33,7 @@ export const Header = () => {
 							href={item.href}
 							className="text-sm font-medium transition-colors hover:text-primary"
 						>
-							{item.name}
+							<GACta event={GA_CTA_EVENTS.onClickNavigation}>{item.name}</GACta>
 						</Link>
 					))}
 				</nav>
