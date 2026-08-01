@@ -44,10 +44,6 @@ export const metadata: Metadata = {
 		creator: '@orchemi',
 		images: BASE_CONFIG.IMAGES,
 	},
-	viewport: {
-		width: 'device-width',
-		initialScale: 1,
-	},
 	robots: BASE_METADATA.ROBOTS,
 	verification: BASE_METADATA.VERIFICATION,
 };
